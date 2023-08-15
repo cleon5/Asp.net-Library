@@ -1,0 +1,42 @@
+﻿@model List<LibroModelo>
+@{
+    ViewData["Title"] = "List";
+}
+<div class="d-flex justify-content-between">
+    <h1 class="center m-2">Lista de libros</h1>
+    <button class="btn btn-success"><a class="text-white" asp-action="Save" asp-controller="Books">Agregar libro</a> </button>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Pages</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Genero</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        @foreach (var Book in Model)
+        {
+            <tr>
+                <td scope="col">@Book.Id_Libro</td>
+                <td scope="col">@Book.Nombre</td>
+                <td scope="col">@Book.Pages</td>
+                <td scope="col">@Book.Tipo</td>
+                <td scope="col">@Book.Genero</td>
+                <td scope="col">
+                    <button class="btn btn-primary">
+                        <a class="text-white" asp-action="Edit" asp-controller="Books" asp-route-IdLibro="@Book.Id_Libro">Edit</a>
+                    </button>
+                    <button class="btn btn-danger">
+                        <a class="text-white" asp-action="Delete" asp-controller="Books" asp-route-IdLibro="@Book.Id_Libro">Delete</a>
+                    </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

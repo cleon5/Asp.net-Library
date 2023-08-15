@@ -1,0 +1,35 @@
+﻿@model LibroModelo
+@{
+    ViewData["Title"] = "Save";
+}
+
+<h1 class="center m-3">Guarda libro</h1>
+<form asp-action="Save" asp-controller="Books" method="post">
+    <div class="mb-3">
+        <label for="Name" class="form-label">Nombre</label>
+        <input class="form-control" asp-for="Nombre"  id="Name" aria-describedby="emailHelp">
+        <span class="text-danger" asp-validation-for="Nombre"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="Pages" class="form-label">Pages</label>
+        <input type="number" asp-for="Pages" class="form-control" id="Pages">
+        <span class="text-danger" asp-validation-for="Pages"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="Tipo" class="form-label">Tipo</label>
+        <input type="text" asp-for="Tipo" class="form-control" id="Tipo">
+        <span class="text-danger" asp-validation-for="Tipo"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="Genero" class="form-label">Genero</label>
+        <input type="text" asp-for="Genero" class="form-control" id="Genero">
+        <span class="text-danger" asp-validation-for="Genero"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
