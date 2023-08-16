@@ -1,0 +1,51 @@
+﻿@model BiblioEntity.Models.ViewModels.LibroVM;
+@{
+    ViewData["Title"] = "GetLibro";
+}
+@if(Model.oLibro.IdLibro == 0)
+{
+    <h1>New Book</h1>
+}
+else{
+    <h1>Edit Book</h1>
+}
+
+<div>
+    <form asp-action="Save" asp-controller="Home" method="post">
+        <input type="hidden" asp-for="oLibro.IdLibro" />
+
+        <div class="mb-3">
+            <label asp-for="oLibro.Nombre" for="Nombre" class="form-label">Nombre</label>
+            <input asp-for="oLibro.Nombre" type="text" class="form-control" id="Nombre" aria-describedby="emailHelp"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="oLibro.Pages" for="Pages" class="form-label">Pages</label>
+            <input asp-for="oLibro.Pages" type="number" class="form-control" id="Pages">
+        </div>
+        <div class="mb-3">
+            <label asp-for="oLibro.Tipo" for="Tipo" class="form-label">Tipo</label>
+            <input asp-for="oLibro.Tipo" type="text" class="form-control" id="Tipo">
+        </div>
+        <div class="mb-3">
+            <label asp-for="oLibro.IdGenero" for="Tipo" class="form-label">Tipo</label>
+            <select asp-for="oLibro.IdGenero" asp-items="@Model.oListaGeneros " type="text" class="form-control" id="Tipo">
+                <option disabled>Selecionar</option>
+            </select>
+        </div>
+
+        <div>
+            @if(Model.oLibro.IdLibro == 0)
+            {
+                <button type="submit" class="btn btn-primary">Create</button>
+            }
+            else
+            {
+                <button type="submit" class="btn btn-primary">Update</button>
+            }
+
+            <a class="btn btn-secondary" asp-action="Index" asp-controller="Home">Back to List</a>
+</div>
+        
+    </form>
+</div>
+

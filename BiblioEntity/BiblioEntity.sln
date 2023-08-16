@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiblioEntity", "BiblioEntity.csproj", "{63E6BD60-3233-4BE5-A17A-838BD82512C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63E6BD60-3233-4BE5-A17A-838BD82512C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63E6BD60-3233-4BE5-A17A-838BD82512C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63E6BD60-3233-4BE5-A17A-838BD82512C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63E6BD60-3233-4BE5-A17A-838BD82512C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1AE5A30D-0222-41A2-B54A-A31C1902C7F0}
+	EndGlobalSection
+EndGlobal
